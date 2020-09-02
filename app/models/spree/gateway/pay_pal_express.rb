@@ -22,6 +22,7 @@ module Spree
         :mode      => preferred_server.present? ? preferred_server : "sandbox",
         :username  => preferred_login,
         :password  => preferred_password,
+        :ssl_options => { ca_file: nil },
         :signature => preferred_signature)
       provider_class.new
     end
